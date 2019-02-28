@@ -1,0 +1,15 @@
+
+//find erroneus php files 
+find . -name \*.php -exec php -l "{}" \;
+
+//find php files that contain the stated string
+sudo grep -rwl '<<<' / --include=*.php
+
+//find php composer errors
+composer diagnose
+
+//list apache2 errors
+tail -f  /var/log/apache2/error.log | grep err
+
+//apache2 config
+sudo nano /etc/apache2/apache2.conf
