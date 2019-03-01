@@ -1,6 +1,9 @@
 
+//find php files' outputs on execution
+find / -name *.php -exec php -l "{}" \;
+
 //find erroneus php files 
-find . -name \*.php -exec php -l "{}" \;
+find / -name *.php -exec php -l "{}" \; | grep "PHP Parse error";
 
 //find php files that contain the stated string
 sudo grep -rwl '<<<' / --include=*.php
