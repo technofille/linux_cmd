@@ -16,3 +16,6 @@ tail -f  /var/log/apache2/error.log | grep err
 
 //apache2 config
 sudo nano /etc/apache2/apache2.conf
+
+//jump to line X in nano editor
+nano +x file.txt
